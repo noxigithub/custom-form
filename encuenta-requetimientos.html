@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Observatorio de Salud Mental</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(to right, #e0f7fa, #fce4ec);
+        padding: 40px 20px;
+        margin: 0;
+      }
+
+      h1 {
+        text-align: center;
+        color: #006064;
+        margin-bottom: 30px;
+      }
+
+      form {
+        background: #ffffff;
+        max-width: 850px;
+        margin: auto;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-weight: 600;
+        color: #37474f;
+        margin-bottom: 8px;
+      }
+
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #cfd8dc;
+        font-size: 16px;
+        transition: border-color 0.3s;
+      }
+
+      input[type="text"]:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #29b6f6;
+        outline: none;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 80px;
+      }
+
+      .checkbox-group {
+        padding-left: 10px;
+      }
+
+      .checkbox-group label {
+        display: block;
+        font-weight: 400;
+        margin: 6px 0;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 8px;
+        transform: scale(1.2);
+      }
+
+      input[type="submit"] {
+        background-color: #00796b;
+        color: white;
+        border: none;
+        padding: 14px 20px;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #004d40;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulario Observatorio de Salud Mental</h1>
+
+    <form action="https://formspree.io/f/xqaldkjk" method="POST">
+      <div class="form-group">
+        <label
+          >1. ¿Cuál es el objetivo principal del Observatorio de Salud
+          Mental?</label
+        >
+        <textarea name="objetivo" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>2. ¿Qué tipo de datos recopilan actualmente?</label>
+        <div class="checkbox-group">
+          <label
+            ><input type="checkbox" name="datos[]" value="Encuestas físicas" />
+            Encuestas físicas</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="datos[]"
+              value="Encuestas digitales"
+            />
+            Encuestas digitales</label
+          >
+          <label
+            ><input type="checkbox" name="datos[]" value="Entrevistas" />
+            Entrevistas</label
+          >
+          <label
+            ><input type="checkbox" name="datos[]" value="Reportes médicos" />
+            Reportes médicos</label
+          >
+          <label
+            ><input type="checkbox" name="datos[]" value="Otros" /> Otros</label
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label
+          >3. ¿Qué frecuencia tienen las encuestas o recolección de
+          datos?</label
+        >
+        <select name="frecuencia" required>
+          <option value="">Seleccione una opción</option>
+          <option value="Diaria">Diaria</option>
+          <option value="Semanal">Semanal</option>
+          <option value="Mensual">Mensual</option>
+          <option value="Trimestral">Trimestral</option>
+          <option value="Anual">Anual</option>
+          <option value="Variable">Variable</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>4. ¿Quiénes participan en la recolección de datos?</label>
+        <input type="text" name="participantes" required />
+      </div>
+
+      <div class="form-group">
+        <label>5. ¿Cómo se almacenan actualmente los datos?</label>
+        <select name="almacenamiento">
+          <option value="Archivos físicos">Archivos físicos</option>
+          <option value="Excel">Hojas de cálculo</option>
+          <option value="Formularios online">Formularios online</option>
+          <option value="Bases de datos">Bases de datos</option>
+          <option value="No formal">No se almacenan formalmente</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>6. ¿Qué tipo de análisis desean realizar con Power BI?</label>
+        <textarea name="analisis"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label
+          >7. ¿Qué preguntas clave quieren responder con la herramienta?</label
+        >
+        <textarea name="preguntas_clave"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label
+          >8. ¿Quién será el público objetivo de los informes o
+          visualizaciones?</label
+        >
+        <div class="checkbox-group">
+          <label
+            ><input type="checkbox" name="publico[]" value="Directivos" />
+            Directivos</label
+          >
+          <label
+            ><input type="checkbox" name="publico[]" value="Personal médico" />
+            Personal médico</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="publico[]"
+              value="Entidades gubernamentales"
+            />
+            Entidades gubernamentales</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="publico[]"
+              value="Comunidad académica"
+            />
+            Comunidad académica</label
+          >
+          <label
+            ><input type="checkbox" name="publico[]" value="Público general" />
+            Público general</label
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>9. ¿Cuál es el formato deseado para los reportes?</label>
+        <select name="formato">
+          <option value="Dashboard">Dashboard</option>
+          <option value="PDF">PDF</option>
+          <option value="Ambos">Ambas opciones</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>10. ¿Se encuenta con herramientas con Power BI o GPT?</label>
+        <textarea name="ia"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>11. ¿Requerimientos técnicos o de seguridad?</label>
+        <textarea name="requerimientos"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>12. ¿Cuál es el presupuesto estimado?</label>
+        <input type="text" name="presupuesto" />
+      </div>
+
+      <div class="form-group">
+        <label>13. ¿Fecha límite o cronograma?</label>
+        <input type="text" name="cronograma" />
+      </div>
+
+      <div class="form-group">
+        <label>14. ¿Frecuencia de reuniones?</label>
+        <select name="frecuencia_reuniones">
+          <option value="Semanal">Semanal</option>
+          <option value="Quincenal">Quincenal</option>
+          <option value="Mensual">Mensual</option>
+          <option value="Por módulo">Solo entregables por módulo</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>15. ¿Desean soporte posterior?</label>
+        <select name="soporte">
+          <option value="Sí, mensual">Sí, mensual</option>
+          <option value="Sí, garantía">Sí, solo por garantía</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>16. ¿Desean capacitación?</label>
+        <select name="capacitacion">
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+          <option value="Tal vez">Tal vez</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>17. Comentarios adicionales</label>
+        <textarea name="comentarios"></textarea>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Enviar respuestas" />
+      </div>
+    </form>
+  </body>
+</html>
